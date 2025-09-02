@@ -123,6 +123,36 @@ p {
   color:#00599C;
 }
 
+/* Blue underline for name in header */
+.name-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+.name-underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #00599C;
+  border-radius: 2px;
+  width: 90vw;
+  max-width: 1100px;
+  margin-left: 0;
+  margin-top: 0.5rem;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .name-underline::after {
+    width: 80vw;
+    max-width: 95vw;
+  }
+}
+
 /* Contact Section */
 /* Dark Contact Section */
 .dark-contact {
@@ -193,4 +223,5 @@ h3{
     max-width: 100%;
     padding: 0.5rem 0;
   }
+
 }
